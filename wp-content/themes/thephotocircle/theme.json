@@ -9,91 +9,19 @@
 			"defaultPalette": false,
 			"duotone": [
 				{
-					"name": "Blue",
-					"slug": "blue",
+					"name": "Brand",
+					"slug": "brand",
 					"colors": [
-						"#462CFF",
-						"#ECE8FF"
+						"#414042",
+						"#FAD928"
 					]
 				},
 				{
-					"name": "Pink",
-					"slug": "Pink",
+					"name": "Dark",
+					"slug": "dark",
 					"colors": [
-						"#F22AAA",
-						"#FFDBF0"
-					]
-				},
-				{
-					"name": "Green",
-					"slug": "green",
-					"colors": [
-						"#196A64",
-						"#E0FFFD"
-					]
-				},
-				{
-					"name": "Yellow",
-					"slug": "yellow",
-					"colors": [
-						"#4B420D",
-						"#FFE465"
-					]
-				},
-				{
-					"name": "Red",
-					"slug": "red",
-					"colors": [
-						"#33120B",
-						"#FF756B"
-					]
-				},
-				{
-					"name": "Teal",
-					"slug": "teal",
-					"colors": [
-						"#233938",
-						"#67EBFF"
-					]
-				},
-				{
-					"name": "Orange",
-					"slug": "orange",
-					"colors": [
-						"#31210D",
-						"#FFA15B"
-					]
-				},
-				{
-					"name": "Punchy",
-					"slug": "punchy",
-					"colors": [
-						"#00007e",
-						"#6aff7e"
-					]
-				},
-				{
-					"name": "Blueberry",
-					"slug": "blueberry",
-					"colors": [
-						"#7f02d3",
-						"#00dbfe"
-					]
-				},
-				{
-					"name": "Lime",
-					"slug": "lime",
-					"colors": [
-						"#02794c",
-						"#fbf01a"
-					]
-				},
-				{
-					"name": "Sunset",
-					"slug": "sunset",
-					"colors": [
-						"#FF3253",
-						"#FFDC53"
+						"#414042",
+						"#f9f8f0"
 					]
 				},
 				{
@@ -103,33 +31,31 @@
 						"#000",
 						"#fff"
 					]
+				},
+				{
+					"name": "Warm",
+					"slug": "warm",
+					"colors": [
+						"#414042",
+						"#FFF3C4"
+					]
 				}
 			],
 			"gradients": [
 				{
-					"name": "Purple",
-					"slug": "purple",
-					"gradient": "linear-gradient(135deg, #4D34FA, #ad34fa)"
+					"name": "Brand",
+					"slug": "brand",
+					"gradient": "linear-gradient(135deg, #FAD928, #f5c800)"
 				},
 				{
-					"name": "Blue",
-					"slug": "blue",
-					"gradient": "linear-gradient(135deg, #0057FF, #31B5FF)"
+					"name": "Dark",
+					"slug": "dark",
+					"gradient": "linear-gradient(135deg, #414042, #2a292b)"
 				},
 				{
-					"name": "Pink",
-					"slug": "pink",
-					"gradient": "linear-gradient(135deg, #FF007A, #FF81BD)"
-				},
-				{
-					"name": "Black",
-					"slug": "black",
-					"gradient": "linear-gradient(135deg, #14111E, #4B4462)"
-				},
-				{
-					"name": "Heat",
-					"slug": "heat",
-					"gradient": "linear-gradient(135deg, #F32758, #FFC581)"
+					"name": "Brand to Light",
+					"slug": "brand-to-light",
+					"gradient": "linear-gradient(135deg, #FAD928, #fff)"
 				}
 			],
 			"palette": [
@@ -141,27 +67,27 @@
 				{
 					"name": "Brand Accent",
 					"slug": "primary-accent",
-					"color": "#fff"
+					"color": "#414042"
 				},
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#5497A7"
+					"color": "#414042"
 				},
 				{
 					"name": "Brand Alt Accent",
 					"slug": "primary-alt-accent",
-					"color": "#A0C6CF"
+					"color": "#FAD928"
 				},
 				{
 					"name": "Contrast",
 					"slug": "main",
-					"color": "#1E1E26"
+					"color": "#414042"
 				},
 				{
 					"name": "Contrast Accent",
 					"slug": "main-accent",
-					"color": "#A0C6CF"
+					"color": "#666264"
 				},
 				{
 					"name": "Base",
@@ -176,12 +102,12 @@
 				{
 					"name": "Tint",
 					"slug": "tertiary",
-					"color": "#f8f7fc"
+					"color": "#f9f8f0"
 				},
 				{
 					"name": "Border Base",
 					"slug": "border-light",
-					"color": "#E3E3F0"
+					"color": "#e0dfd6"
 				},
 				{
 					"name": "Border Contrast",
@@ -479,7 +405,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|monospace)",
+					"fontFamily": "var:preset|font-family|monospace",
 					"fontSize": "var:preset|font-size|small"
 				}
 			},
@@ -626,7 +552,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|monospace)",
+					"fontFamily": "var:preset|font-family|monospace",
 					"fontSize": "var:preset|font-size|small"
 				}
 			},
@@ -795,7 +721,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "Oswald, sans-serif",
+					"fontFamily": "var:preset|font-family|condensed",
 					"fontSize": "var:preset|font-size|small",
 					"fontWeight": "700"
 				},
