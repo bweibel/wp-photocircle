@@ -1,0 +1,45 @@
+# WordPress core files
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/license.txt
+/readme.html
+/xmlrpc.php
+
+# wp-content root files
+/wp-content/db.php
+/wp-content/index.php
+
+# Uploads
+/wp-content/uploads/
+
+# Upgrade files
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+
+# Plugins (add back specific custom plugins you want to track)
+/wp-content/plugins/
+
+# Default/third-party themes
+/wp-content/themes/index.php
+/wp-content/themes/twenty*/
+
+# Local by Flywheel
+/local-xdebuginfo.php
+/wp-config-sample.php
+
+# Environment config
+/wp-config.php
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Node (if using build tools in theme)
+node_modules/

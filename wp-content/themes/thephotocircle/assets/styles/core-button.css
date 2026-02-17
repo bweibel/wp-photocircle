@@ -1,0 +1,30 @@
+/* Button - Outline Style
+--------------------------------------------- */
+
+.wp-block-button .wp-block-button__link {
+	transform: translateY(0);
+	transition: transform .2s;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+	transform: translateY(-2px);
+}
+
+.wp-block-button .wp-block-button__link:active {
+	transform: translateY(4px);
+		transition: transform 0s;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	border: none;
+	background-color: transparent;
+	outline: 2px solid currentColor;
+	outline-offset: -3.5px;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+	color: var(--wp--preset--color--main) !important;
+	outline-color: var(--wp--preset--color--main);
+	text-decoration: none;
+	transform: translateY(-2px);
+}
