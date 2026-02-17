@@ -246,6 +246,83 @@ header:has(>.is-position-sticky) {
 	}
 }
 
+/* Animation utility classes
+--------------------------------------------- */
+
+@keyframes ollie-fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes ollie-fade-in-up {
+	from { opacity: 0; transform: translateY(12px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ollie-fade-in-down {
+	from { opacity: 0; transform: translateY(-12px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ollie-fade-in-left {
+	from { opacity: 0; transform: translateX(-12px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ollie-fade-in-right {
+	from { opacity: 0; transform: translateX(12px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ollie-scale-in {
+	from { opacity: 0; transform: scale(0.97); }
+	to { opacity: 1; transform: scale(1); }
+}
+
+.ollie-fade-in {
+	animation: ollie-fade-in 0.3s ease-out both;
+}
+
+.ollie-fade-in-up {
+	animation: ollie-fade-in-up 0.3s ease-out both;
+}
+
+.ollie-fade-in-down {
+	animation: ollie-fade-in-down 0.3s ease-out both;
+}
+
+.ollie-fade-in-left {
+	animation: ollie-fade-in-left 0.3s ease-out both;
+}
+
+.ollie-fade-in-right {
+	animation: ollie-fade-in-right 0.3s ease-out both;
+}
+
+.ollie-scale-in {
+	animation: ollie-scale-in 0.3s ease-out both;
+}
+
+/* Animation delay modifiers */
+.ollie-delay-1 { animation-delay: 0.1s; }
+.ollie-delay-2 { animation-delay: 0.2s; }
+.ollie-delay-3 { animation-delay: 0.3s; }
+.ollie-delay-4 { animation-delay: 0.4s; }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.ollie-fade-in,
+	.ollie-fade-in-up,
+	.ollie-fade-in-down,
+	.ollie-fade-in-left,
+	.ollie-fade-in-right,
+	.ollie-scale-in {
+		animation: none;
+		opacity: 1;
+		transform: none;
+	}
+}
+
 /* Mobile helper classes */
 
 @media (max-width: 781px) {
