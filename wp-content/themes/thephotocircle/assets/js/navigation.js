@@ -13,5 +13,5 @@
   window.addEventListener('scroll', toggleBodyClassOnScroll);
 
   // Also check on initial page load, in case the page opens at a non-zero scroll position
-  document.addEventListener('DOMContentLoaded', toggleBodyClassOnScroll);
+  toggleBodyClassOnScroll();
 })();
