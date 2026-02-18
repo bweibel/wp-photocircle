@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "thephotocircle/cta-image-grid",
+	"version": "1.0.0",
+	"title": "CTA Image Grid",
+	"category": "design",
+	"icon": "grid-view",
+	"description": "A staggered grid of CTA cards with background images and color overlays.",
+	"keywords": [ "cta", "grid", "cards", "gallery", "call to action" ],
+	"textdomain": "thephotocircle",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

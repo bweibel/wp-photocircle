@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "thephotocircle/cta-image-card",
+	"version": "1.0.0",
+	"title": "CTA Image Card",
+	"category": "design",
+	"icon": "cover-image",
+	"description": "A CTA card with a background image and color overlay.",
+	"keywords": [ "cta", "card", "image", "button" ],
+	"textdomain": "thephotocircle",
+	"parent": [ "thephotocircle/cta-image-grid" ],
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"overlay": {
+			"type": "string",
+			"default": "none",
+			"enum": [ "none", "brand", "dark" ]
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

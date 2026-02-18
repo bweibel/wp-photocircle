@@ -1,0 +1,60 @@
+.wp-block-thephotocircle-cta-image-grid {
+	--grid-gap: clamp(1rem, 2vw, 1.5rem);
+	--stagger-offset: 3rem;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--grid-gap);
+
+	// Staggered layout: odd cards push down, even cards push up
+	// Row 1: card 1 (tall, top-aligned), card 2 (shorter, pushed down)
+	// Row 2: card 3 (shorter, bottom-aligned), card 4 (tall, pushed up)
+	.wp-block-thephotocircle-cta-image-card {
+		// Odd cards (1st, 3rd) — left column
+		&:nth-child(odd) {
+			justify-self: stretch;
+		}
+
+		// Even cards (2nd, 4th) — right column
+		&:nth-child(even) {
+			justify-self: stretch;
+		}
+
+		// 1st card — tall, starts at top
+		&:nth-child(1) {
+			min-height: 340px;
+		}
+
+		// 2nd card — shorter, offset down
+		&:nth-child(2) {
+			margin-top: var(--stagger-offset);
+			min-height: 240px;
+		}
+
+		// 3rd card — shorter
+		&:nth-child(3) {
+			min-height: 240px;
+			margin-top: calc(var(--stagger-offset) * -1);
+		}
+
+		// 4th card — tall
+		&:nth-child(4) {
+			min-height: 340px;
+			margin-top: calc(var(--stagger-offset) * -2);
+		}
+	}
+
+	// -------------------------
+	// Responsive
+	// -------------------------
+	@media (max-width: 600px) {
+		--stagger-offset: 0;
+
+		grid-template-columns: 1fr;
+
+		.wp-block-thephotocircle-cta-image-card {
+			min-height: 200px !important;
+			margin-top: 0 !important;
+		}
+	}
+}

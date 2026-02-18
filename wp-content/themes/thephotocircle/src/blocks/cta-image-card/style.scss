@@ -1,0 +1,110 @@
+.wp-block-thephotocircle-cta-image-card {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	border-radius: 16px;
+	overflow: hidden;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+		.cta-image-card__overlay {
+			opacity: 1;
+		}
+	}
+
+	// -------------------------
+	// Background image
+	// -------------------------
+	.cta-image-card__img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+
+	// -------------------------
+	// Overlay layer
+	// -------------------------
+	.cta-image-card__overlay {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	// -------------------------
+	// Text
+	// -------------------------
+	.cta-image-card__text {
+		position: relative;
+		z-index: 2;
+		padding: clamp(1.25rem, 3vw, 2rem);
+		font-family: var(--wp--preset--font-family--primary);
+		font-size: clamp(1.25rem, 3vw, 1.75rem);
+		font-weight: 800;
+		line-height: 1.15;
+	}
+
+	// =========================================
+	// Overlay variants
+	// =========================================
+
+	// None — image shows through, subtle bottom gradient for text legibility
+	&.is-overlay-none {
+		.cta-image-card__overlay {
+			background: linear-gradient(
+				to top,
+				rgba(0, 0, 0, 0.5) 0%,
+				rgba(0, 0, 0, 0) 60%
+			);
+			opacity: 0.85;
+		}
+
+		.cta-image-card__text {
+			color: #fff;
+		}
+
+		&:hover .cta-image-card__overlay {
+			opacity: 1;
+		}
+	}
+
+	// Brand — yellow tint overlay, dark text
+	&.is-overlay-brand {
+		.cta-image-card__overlay {
+			background-color: rgba(250, 217, 40, 0.8);
+			opacity: 0.85;
+		}
+
+		.cta-image-card__text {
+			color: #414042;
+		}
+
+		&:hover .cta-image-card__overlay {
+			opacity: 0.92;
+		}
+	}
+
+	// Dark — dark overlay, yellow text
+	&.is-overlay-dark {
+		.cta-image-card__overlay {
+			background-color: rgba(65, 64, 66, 0.88);
+			opacity: 0.9;
+		}
+
+		.cta-image-card__text {
+			color: #fad928;
+		}
+
+		&:hover .cta-image-card__overlay {
+			opacity: 0.95;
+		}
+	}
+}

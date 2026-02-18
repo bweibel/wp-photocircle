@@ -104,6 +104,8 @@ add_action( 'init', __NAMESPACE__ . '\register_block_styles' );
 function register_custom_blocks() {
 	register_block_type( get_template_directory() . '/build/blocks/cta-circle' );
 	register_block_type( get_template_directory() . '/build/blocks/hero-collage' );
+	register_block_type( get_template_directory() . '/build/blocks/cta-image-grid' );
+	register_block_type( get_template_directory() . '/build/blocks/cta-image-card' );
 }
 add_action( 'init', __NAMESPACE__ . '\register_custom_blocks' );
 

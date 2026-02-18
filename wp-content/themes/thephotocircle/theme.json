@@ -311,6 +311,56 @@
 					]
 				},
 				{
+					"fontFamily": "Oswald, sans-serif",
+					"name": "Oswald",
+					"slug": "oswald",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Oswald",
+							"fontStyle": "normal",
+							"fontWeight": "200 700",
+							"src": [
+								"file:./assets/fonts/oswald/Oswald-VariableFont_wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "'Passion One', sans-serif",
+					"name": "Passion One",
+					"slug": "passion-one",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Passion One",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/passion-one/PassionOne-Regular.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Passion One",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/passion-one/PassionOne-Bold.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Passion One",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./assets/fonts/passion-one/PassionOne-Black.woff2"
+							]
+						}
+					]
+				},
+				{
 					"fontFamily": "monospace",
 					"name": "Monospace",
 					"slug": "monospace"
@@ -769,7 +819,7 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|primary",
+					"fontFamily": "var:preset|font-family|oswald",
 					"fontWeight": "600",
 					"lineHeight": "var:custom|line-height|body"
 				}
