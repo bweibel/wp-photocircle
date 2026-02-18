@@ -1,0 +1,38 @@
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.6 MB/256 MB - ben > Start upgrade from 0.0.0
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.6 MB/256 MB - ben > Array
+(
+    [wp_newsletter_emails] => Created table `wp_newsletter_emails`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.6 MB/256 MB - ben > Array
+(
+    [wp_newsletter_sent] => Created table `wp_newsletter_sent`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.6 MB/256 MB - ben > Array
+(
+    [wp_newsletter] => Created table `wp_newsletter`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.6 MB/256 MB - ben > Array
+(
+    [wp_newsletter_user_logs] => Created table `wp_newsletter_user_logs`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.6 MB/256 MB - ben > Array
+(
+    [wp_newsletter_user_meta] => Created table `wp_newsletter_user_meta`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.7 MB/256 MB - ben > Array
+(
+    [wp_newsletter_stats] => Created table `wp_newsletter_stats`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.7 MB/256 MB - ben > Array
+(
+    [wp_newsletter_logs] => Created table `wp_newsletter_logs`
+)
+
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.8 MB/256 MB - ben > Backing up options of 0.0.0
+18-02-2026 08:05:44 - INFO  - 9.1.2 - 8.8 MB/256 MB - ben > End
