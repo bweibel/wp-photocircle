@@ -1,0 +1,54 @@
+.wp-block-thephotocircle-hero-collage {
+	// Placeholders inside circles in the editor
+	.hero-collage-circle .components-placeholder {
+		min-height: unset;
+		height: 100%;
+		border-radius: 50%;
+	}
+
+	// Placeholder inside the main slideshow area
+	.hero-collage-main > .components-placeholder {
+		min-height: 200px;
+		border-radius: 24px;
+	}
+
+	// Gallery thumbnail previews in the sidebar
+	.hero-collage-gallery-preview {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		margin-bottom: 8px;
+
+		img {
+			width: 48px;
+			height: 48px;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+	}
+
+	// Sidebar image slot previews
+	.hero-collage-image-slot {
+		margin-bottom: 16px;
+
+		&__label {
+			font-weight: 600;
+			margin-bottom: 4px;
+		}
+
+		&__preview {
+			img {
+				width: 100%;
+				max-height: 120px;
+				object-fit: cover;
+				border-radius: 4px;
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	// Text overlay needs to be clickable/editable in the editor
+	.hero-collage-text {
+		pointer-events: auto;
+	}
+}

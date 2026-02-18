@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "thephotocircle/cta-circle",
+	"version": "1.0.0",
+	"title": "CTA Circle",
+	"category": "design",
+	"icon": "button",
+	"description": "A large call-to-action button with decorative circle shapes.",
+	"keywords": [ "cta", "button", "circle", "call to action" ],
+	"textdomain": "thephotocircle",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Join a Circle"
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"variant": {
+			"type": "string",
+			"default": "dark",
+			"enum": [ "dark", "brand" ]
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -43,3 +43,6 @@ Thumbs.db
 
 # Node (if using build tools in theme)
 node_modules/
+
+# Block build output (regenerated via npm run build)
+wp-content/themes/thephotocircle/build/

@@ -1,0 +1,6 @@
+.wp-block-thephotocircle-cta-circle {
+	// Remove hover transform in editor to avoid layout jank while editing.
+	&:hover {
+		transform: none;
+	}
+}

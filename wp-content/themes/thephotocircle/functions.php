@@ -99,6 +99,16 @@ add_action( 'init', __NAMESPACE__ . '\register_block_styles' );
 
 
 /**
+ * Register custom blocks.
+ */
+function register_custom_blocks() {
+	register_block_type( get_template_directory() . '/build/blocks/cta-circle' );
+	register_block_type( get_template_directory() . '/build/blocks/hero-collage' );
+}
+add_action( 'init', __NAMESPACE__ . '\register_custom_blocks' );
+
+
+/**
  * Load custom block styles only when the block is used.
  */
 function enqueue_custom_block_styles() {

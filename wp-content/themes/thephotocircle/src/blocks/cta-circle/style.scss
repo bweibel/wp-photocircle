@@ -1,0 +1,48 @@
+.wp-block-thephotocircle-cta-circle {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	position: relative;
+	padding: 2rem 2.5rem;
+	min-height: 180px;
+	border-radius: 16px;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	}
+
+	// Dark variant (default)
+	&.is-style-dark {
+		background-color: #414042;
+		color: #fff;
+	}
+
+	// Brand / yellow variant
+	&.is-style-brand {
+		background-color: #fad928;
+		color: #414042;
+	}
+
+	.cta-circle-decoration {
+		position: absolute;
+		top: 12px;
+		left: 16px;
+		width: 100px;
+		height: 80px;
+	}
+
+	.cta-circle-text {
+		font-family: var(--wp--preset--font-family--primary);
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 800;
+		line-height: 1.1;
+		position: relative;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,142 @@
+.wp-block-thephotocircle-hero-collage {
+	--hero-circle-lg: clamp(200px, 30vw, 380px);
+	--hero-circle-sm: clamp(100px, 14vw, 180px);
+
+	display: grid;
+	grid-template-columns: var(--hero-circle-lg) 1fr;
+	grid-template-rows: 1fr auto;
+	gap: 0;
+	position: relative;
+	min-height: clamp(300px, 45vw, 520px);
+
+	// -------------------------
+	// Circle images (shared)
+	// -------------------------
+	.hero-collage-circle {
+		border-radius: 50%;
+		overflow: hidden;
+		flex-shrink: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// Large circle — top-left, overlaps behind main area
+	.hero-collage-circle--lg {
+		grid-column: 1;
+		grid-row: 1 / -1;
+		width: var(--hero-circle-lg);
+		height: var(--hero-circle-lg);
+		align-self: start;
+		z-index: 1;
+	}
+
+	// Small circle — bottom-left, overlaps both
+	.hero-collage-circle--sm {
+		width: var(--hero-circle-sm);
+		height: var(--hero-circle-sm);
+		position: absolute;
+		bottom: -10%;
+		left: calc(var(--hero-circle-lg) * 0.35);
+		z-index: 3;
+	}
+
+	// -------------------------
+	// Main slideshow area
+	// -------------------------
+	.hero-collage-main {
+		grid-column: 2;
+		grid-row: 1 / -1;
+		position: relative;
+		border-radius: 24px;
+		overflow: hidden;
+		margin-left: calc(var(--hero-circle-lg) * -0.15);
+		z-index: 2;
+		min-height: 100%;
+	}
+
+	// Slideshow images — stacked, crossfade
+	.hero-collage-slide {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+
+		&.is-active {
+			opacity: 1;
+		}
+	}
+
+	// -------------------------
+	// Text overlay
+	// -------------------------
+	.hero-collage-text {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: clamp(2rem, 5vw, 4rem);
+		z-index: 4;
+		background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(0, 0, 0, 0.05) 100%
+		);
+	}
+
+	.hero-collage-headline {
+		font-family: var(--wp--preset--font-family--primary);
+		font-size: clamp(2rem, 6vw, 4.5rem);
+		font-weight: 900;
+		line-height: 0.95;
+		color: #fff;
+		text-transform: uppercase;
+		margin: 0 0 0.25em;
+	}
+
+	.hero-collage-subheadline {
+		font-family: var(--wp--preset--font-family--primary);
+		font-size: clamp(1.25rem, 3vw, 2.25rem);
+		font-weight: 300;
+		font-style: italic;
+		line-height: 1.2;
+		color: #fff;
+		margin: 0;
+	}
+
+	// -------------------------
+	// Responsive — stack on small screens
+	// -------------------------
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+
+		.hero-collage-circle--lg {
+			width: clamp(120px, 40vw, 200px);
+			height: clamp(120px, 40vw, 200px);
+			grid-row: 1;
+			justify-self: start;
+			z-index: 3;
+		}
+
+		.hero-collage-main {
+			grid-column: 1;
+			grid-row: 1 / -1;
+			margin-left: 0;
+			min-height: 300px;
+		}
+
+		.hero-collage-circle--sm {
+			left: 10%;
+			bottom: -8%;
+		}
+	}
+}

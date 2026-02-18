@@ -1,23 +1,26 @@
 {
-	"name": "Bweib Ollie",
-	"version": "1.0",
-	"description": "Fork of the Ollie Theme by Mike McAlister",
+	"name": "thephotocircle",
+	"version": "1.0.0",
+	"description": "The Photo Circle WordPress theme",
 	"scripts": {
-	  "translate:patterns": "node theme-utils.mjs escape-patterns --text-domain=ollie",
-	  "dev": "node theme-utils.mjs watch --text-domain=ollie"
+		"translate:patterns": "node theme-utils.mjs escape-patterns --text-domain=ollie",
+		"dev": "node theme-utils.mjs watch --text-domain=ollie",
+		"build": "wp-scripts build --webpack-src-dir=src/blocks --output-path=build/blocks",
+		"start": "wp-scripts start --webpack-src-dir=src/blocks --output-path=build/blocks"
 	},
 	"keywords": [
-	  "wordpress",
-	  "theme",
-	  "block-theme",
-	  "translation"
+		"wordpress",
+		"theme",
+		"block-theme"
 	],
-	"author": "Mike McAlister",
+	"author": "Ben Weibel",
 	"license": "GPL-2.0-or-later",
 	"dependencies": {
-	  "parse5-html-rewriting-stream": "^7.0.0",
-	  "fast-glob": "^3.3.2",
-	  "chokidar": "^3.5.3"
+		"parse5-html-rewriting-stream": "^7.0.0",
+		"fast-glob": "^3.3.2",
+		"chokidar": "^3.5.3"
 	},
-	"type": "module"
-  }
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.0"
+	}
+}

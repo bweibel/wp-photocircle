@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "thephotocircle/hero-collage",
+	"version": "1.0.0",
+	"title": "Hero Collage",
+	"category": "design",
+	"icon": "format-gallery",
+	"description": "A hero section with two circular images, a slideshow area, and text overlay.",
+	"keywords": [ "hero", "collage", "slideshow", "gallery", "circle" ],
+	"textdomain": "thephotocircle",
+	"attributes": {
+		"circleImageLg": {
+			"type": "object",
+			"default": {}
+		},
+		"circleImageSm": {
+			"type": "object",
+			"default": {}
+		},
+		"slideImages": {
+			"type": "array",
+			"default": []
+		},
+		"headline": {
+			"type": "string",
+			"default": ""
+		},
+		"subheadline": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
