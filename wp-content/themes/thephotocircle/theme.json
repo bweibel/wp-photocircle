@@ -139,8 +139,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "60rem",
-			"wideSize": "80rem"
+			"contentSize": "65rem",
+			"wideSize": "75rem"
 		},
 		"shadow": {
 			"defaultPresets": false,
@@ -388,18 +388,18 @@
 				{
 					"fluid": {
 						"min": "1rem",
-						"max": "1.165rem"
+						"max": "1.265rem"
 					},
-					"size": "1.165rem",
+					"size": "1.265rem",
 					"slug": "base",
 					"name": "Base"
 				},
 				{
 					"fluid": {
 						"min": "1.2rem",
-						"max": "1.65rem"
+						"max": "1.45rem"
 					},
-					"size": "1.65rem",
+					"size": "1.45rem",
 					"slug": "medium",
 					"name": "Medium"
 				},
@@ -415,9 +415,9 @@
 				{
 					"fluid": {
 						"min": "1.875rem",
-						"max": "3.5rem"
+						"max": "4.25rem"
 					},
-					"size": "3.5rem",
+					"size": "3.75rem",
 					"slug": "x-large",
 					"name": "Extra Large"
 				},
