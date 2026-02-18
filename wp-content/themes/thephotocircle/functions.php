@@ -154,6 +154,24 @@ function enqueue_woocommerce_styles() {
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_woocommerce_styles' );
 
+
+/**
+ * Enqueue The Events Calendar specific stylesheet
+ */
+function enqueue_the_events_calendar_styles() {
+
+	// Only enqueue if The Events Calendar is active
+	if ( class_exists( 'Tribe__Events__Main' ) ) {
+		wp_enqueue_style(
+			'theme-the-events-calendar-style',
+			get_template_directory_uri() . '/assets/styles/the-events-calendar.css',
+			array(),
+			'1.0.0'
+		);
+	}
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_the_events_calendar_styles' );
+
 /**
  * // Enqueue navigation script for the frontend
 

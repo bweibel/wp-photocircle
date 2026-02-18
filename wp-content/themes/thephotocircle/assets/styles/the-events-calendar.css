@@ -1,0 +1,45 @@
+/* The Events Calendar - Brand Styling
+--------------------------------------------- */
+
+:root {
+	/* Accent colors */
+	--tec-color-accent-primary: #FAD928;
+	--tec-color-accent-primary-hover: #FAD928cc;
+	--tec-color-accent-primary-active: #FAD928e6;
+	--tec-color-accent-primary-background: #FAD92812;
+	--tec-color-accent-secondary: #414042;
+	--tec-color-accent-secondary-hover: #414042cc;
+	--tec-color-accent-secondary-active: #414042e6;
+	--tec-color-accent-secondary-background: #41404212;
+
+	/* Text colors */
+	--tec-color-text-primary: #414042;
+	--tec-color-text-primary-light: #4140429e;
+	--tec-color-text-secondary: #5d5d5d;
+
+	/* Icon colors */
+	--tec-color-icon-active: #414042;
+	--tec-color-event-icon: #414042;
+	--tec-color-event-icon-hover: #FAD928;
+
+	/* Link colors */
+	--tec-color-link-primary: #414042;
+	--tec-color-link-accent: #414042;
+	--tec-color-link-accent-hover: #414042cc;
+
+	/* Border colors */
+	--tec-color-border-active: #414042;
+
+	/* Multiday & week event highlights */
+	--tec-color-background-primary-multiday: #FAD9283d;
+	--tec-color-background-primary-multiday-hover: #FAD92857;
+	--tec-color-background-secondary-multiday: #4140423d;
+	--tec-color-background-secondary-multiday-hover: #41404257;
+	--tec-color-accent-primary-week-event: #FAD9281a;
+	--tec-color-accent-primary-week-event-hover: #FAD92833;
+	--tec-color-accent-primary-week-event-featured: #FAD9280a;
+	--tec-color-accent-primary-week-event-featured-hover: #FAD92824;
+
+	/* Typography */
+	--tec-font-family-sans-serif: "Mona Sans", "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+}
