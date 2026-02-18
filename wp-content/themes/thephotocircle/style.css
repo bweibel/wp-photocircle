@@ -144,8 +144,8 @@ label {
 
 	--content: min(var(--wp--style--global--wide-size), 100%);
     display: grid;
-    grid-template-columns:  1fr  var(--content) 1fr  ;
-	grid-template-areas: ". main . ";
+    grid-template-columns:  1fr  var(--content) 1fr;
+	grid-template-areas: ". main . " "nav nav nav ";
 
 	background-color: var(--wp--preset--color--primary);
 	transition: background-color 0.2s, filter 0.2s;
@@ -156,7 +156,7 @@ label {
 .is-scrolling .site-header {
 	background-color: color-mix(in srgb, currentColor 90%, transparent);
 	backdrop-filter: blur(5px);
-		box-shadow: 0px 69px 19px 0px rgba(20, 17, 31, 0.00), 0px 44px 18px 0px rgba(20, 17, 31, 0.01), 0px 25px 15px 0px rgba(20, 17, 31, 0.03), 0px 11px 11px 0px rgba(20, 17, 31, 0.04), 0px 3px 6px 0px rgba(20, 17, 31, 0.05);
+	box-shadow: 0px 69px 19px 0px rgba(20, 17, 31, 0.00), 0px 44px 18px 0px rgba(20, 17, 31, 0.01), 0px 25px 15px 0px rgba(20, 17, 31, 0.03), 0px 11px 11px 0px rgba(20, 17, 31, 0.04), 0px 3px 6px 0px rgba(20, 17, 31, 0.05);
 
 }
 
@@ -167,17 +167,36 @@ label {
 	padding-block: var(--wp--preset--spacing--small);
 }
 
+.site-header .header-buttons {
+	margin-top: 0;
+}
+
+.navigation-desktop {
+	grid-area: nav;
+	justify-content: center;
+	background-color: var(--wp--preset--color--base);
+}
+
+.is-scrolling .navigation-desktop {
+background-color: transparent;
+}
+
+.navigation-desktop .wp-block-navigation__container {
+	max-width: fit-content;
+}
+
 .is-scrolling  .site-header .header-content {
 	padding-block: calc(var(--wp--preset--spacing--small)/2);
 }
 
 .header-content .wp-block-site-logo {
-	max-width: 200px;
+	max-width: 300px;
 	transition:  0.2s max-width;
 }
 
 .is-scrolling .header-content .wp-block-site-logo {
-	max-width: 75px;
+	max-width: 250px;
+	filter: brightness(100);
 }
 
 
@@ -337,9 +356,15 @@ header:has(>.is-position-sticky) {
 
 /* Mobile helper classes */
 
+@media (min-width: 780px) {
+.ollie-hide-on-desktop {
+	display: none!important;
+}
+}
+
 @media (max-width: 781px) {
 	.ollie-hide-on-mobile {
-		display: none;
+		display: none!important;
 	}
 
 	.ollie-unstick-mobile {

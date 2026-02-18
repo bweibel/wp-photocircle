@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	align-items: flex-end;
-	border-radius: 16px;
+	border-radius: 2rem;
 	overflow: hidden;
 	text-decoration: none;
 	cursor: pointer;
@@ -106,5 +106,19 @@
 		&:hover .cta-image-card__overlay {
 			opacity: 0.95;
 		}
+	}
+
+	// Card Layouts
+	.cta-image-card-1 {
+		grid-area: "card-1";
+	}
+	.cta-image-card-2 {
+		grid-area: "card-2";
+	}
+	.cta-image-card-3 {
+		grid-area: "card-3";
+	}
+	.cta-image-card-4 {
+		grid-area: "card-4";
 	}
 }

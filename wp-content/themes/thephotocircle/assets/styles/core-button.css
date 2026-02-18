@@ -4,6 +4,9 @@
 .wp-block-button .wp-block-button__link {
 	transform: translateY(0);
 	transition: transform .2s;
+	font-weight: 900;
+	letter-spacing: -1px;
+	border-radius: .75rem;
 }
 
 .wp-block-button .wp-block-button__link:hover {

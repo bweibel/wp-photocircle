@@ -82,7 +82,7 @@
 				{
 					"name": "Contrast",
 					"slug": "main",
-					"color": "#414042"
+					"color": "#2a2a2a"
 				},
 				{
 					"name": "Contrast Accent",
@@ -787,34 +787,34 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var:preset|font-size|x-large",
-					"lineHeight": "var:custom|line-height|snug"
+					"fontSize": "var:preset|font-size|xx-large",
+					"lineHeight": "var:custom|line-height|tight"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var:preset|font-size|large",
-					"lineHeight": "var:custom|line-height|snug"
+					"fontSize": "var:preset|font-size|x-large",
+					"lineHeight": "var:custom|line-height|tight"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var:preset|font-size|medium"
+					"fontSize": "var:preset|font-size|large"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var:preset|font-size|base"
+					"fontSize": "var:preset|font-size|medium"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var:preset|font-size|small"
+					"fontSize": "var:preset|font-size|base"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var:preset|font-size|x-small"
+					"fontSize": "var:preset|font-size|small"
 				}
 			},
 			"heading": {

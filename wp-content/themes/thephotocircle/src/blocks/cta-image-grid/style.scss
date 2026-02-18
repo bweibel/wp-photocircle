@@ -1,9 +1,8 @@
 .wp-block-thephotocircle-cta-image-grid {
 	--grid-gap: clamp(1rem, 2vw, 1.5rem);
-	--stagger-offset: 3rem;
 
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	gap: var(--grid-gap);
 
 	// Staggered layout: odd cards push down, even cards push up
@@ -22,25 +21,17 @@
 
 		// 1st card — tall, starts at top
 		&:nth-child(1) {
-			min-height: 340px;
 		}
 
 		// 2nd card — shorter, offset down
 		&:nth-child(2) {
-			margin-top: var(--stagger-offset);
-			min-height: 240px;
 		}
 
 		// 3rd card — shorter
-		&:nth-child(3) {
-			min-height: 240px;
-			margin-top: calc(var(--stagger-offset) * -1);
-		}
+		&:nth-child(3) {}
 
 		// 4th card — tall
 		&:nth-child(4) {
-			min-height: 340px;
-			margin-top: calc(var(--stagger-offset) * -2);
 		}
 	}
 
@@ -48,7 +39,6 @@
 	// Responsive
 	// -------------------------
 	@media (max-width: 600px) {
-		--stagger-offset: 0;
 
 		grid-template-columns: 1fr;
 
