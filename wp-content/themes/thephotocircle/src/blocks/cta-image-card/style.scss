@@ -50,6 +50,8 @@
 		font-size: clamp(1.25rem, 3vw, 1.75rem);
 		font-weight: 800;
 		line-height: 1.15;
+		font-size: 3.5rem;
+		align-self: center;
 	}
 
 	// =========================================
@@ -108,17 +110,5 @@
 		}
 	}
 
-	// Card Layouts
-	.cta-image-card-1 {
-		grid-area: "card-1";
-	}
-	.cta-image-card-2 {
-		grid-area: "card-2";
-	}
-	.cta-image-card-3 {
-		grid-area: "card-3";
-	}
-	.cta-image-card-4 {
-		grid-area: "card-4";
-	}
+
 }

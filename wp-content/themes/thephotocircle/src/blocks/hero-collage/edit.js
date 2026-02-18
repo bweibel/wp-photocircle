@@ -10,6 +10,7 @@ import {
 	PanelBody,
 	Button,
 	Placeholder,
+	TextControl,
 } from '@wordpress/components';
 import './editor.scss';
 
@@ -55,12 +56,27 @@ function ImageSlot( { label, image, onSelect, onRemove } ) {
 }
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { circleImageLg, circleImageSm, slideImages, headline, subheadline } =
+	const { circleImageLg, circleImageSm, slideImages, headline, subheadlines } =
 		attributes;
 
 	const blockProps = useBlockProps();
 
 	const firstSlide = slideImages?.length > 0 ? slideImages[ 0 ] : null;
+
+	const updateSubheadline = ( index, value ) => {
+		const updated = [ ...subheadlines ];
+		updated[ index ] = value;
+		setAttributes( { subheadlines: updated } );
+	};
+
+	const addSubheadline = () => {
+		setAttributes( { subheadlines: [ ...( subheadlines || [] ), '' ] } );
+	};
+
+	const removeSubheadline = ( index ) => {
+		const updated = subheadlines.filter( ( _, i ) => i !== index );
+		setAttributes( { subheadlines: updated } );
+	};
 
 	return (
 		<>
@@ -146,6 +162,40 @@ export default function Edit( { attributes, setAttributes } ) {
 						/>
 					</MediaUploadCheck>
 				</PanelBody>
+				<PanelBody
+					title={ __( 'Rotating Subheadlines', 'thephotocircle' ) }
+				>
+					{ ( subheadlines || [] ).map( ( text, index ) => (
+						<div
+							key={ index }
+							className="hero-collage-subheadline-row"
+						>
+							<TextControl
+								value={ text }
+								onChange={ ( value ) =>
+									updateSubheadline( index, value )
+								}
+								placeholder={ __(
+									'Subheadline text…',
+									'thephotocircle'
+								) }
+							/>
+							<Button
+								icon="no-alt"
+								isDestructive
+								label={ __( 'Remove', 'thephotocircle' ) }
+								onClick={ () => removeSubheadline( index ) }
+								size="small"
+							/>
+						</div>
+					) ) }
+					<Button
+						variant="secondary"
+						onClick={ addSubheadline }
+					>
+						{ __( 'Add Subheadline', 'thephotocircle' ) }
+					</Button>
+				</PanelBody>
 			</InspectorControls>
 
 			<div { ...blockProps }>
@@ -200,19 +250,15 @@ export default function Edit( { attributes, setAttributes } ) {
 							) }
 							allowedFormats={ [ 'core/bold', 'core/italic' ] }
 						/>
-						<RichText
-							tagName="p"
-							className="hero-collage-subheadline"
-							value={ subheadline }
-							onChange={ ( value ) =>
-								setAttributes( { subheadline: value } )
-							}
-							placeholder={ __(
-								'in community',
-								'thephotocircle'
-							) }
-							allowedFormats={ [ 'core/bold', 'core/italic' ] }
-						/>
+						{ subheadlines?.length > 0 ? (
+							<p className="hero-collage-subheadline">
+								{ subheadlines[ 0 ] }
+							</p>
+						) : (
+							<p className="hero-collage-subheadline hero-collage-subheadline--placeholder">
+								{ __( 'Add subheadlines in sidebar →', 'thephotocircle' ) }
+							</p>
+						) }
 					</div>
 				</div>
 

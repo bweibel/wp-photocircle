@@ -4,7 +4,7 @@
 	"description": "The Photo Circle WordPress theme",
 	"scripts": {
 		"translate:patterns": "node theme-utils.mjs escape-patterns --text-domain=ollie",
-		"dev": "node theme-utils.mjs watch --text-domain=ollie",
+		"dev": "wp-scripts start --webpack-src-dir=src/blocks --output-path=build/blocks & node theme-utils.mjs watch --text-domain=ollie",
 		"build": "wp-scripts build --webpack-src-dir=src/blocks --output-path=build/blocks",
 		"start": "wp-scripts start --webpack-src-dir=src/blocks --output-path=build/blocks"
 	},

@@ -3,7 +3,7 @@
 	--hero-circle-sm: clamp(100px, 14vw, 180px);
 
 	display: grid;
-	grid-template-columns: var(--hero-circle-lg) 1fr;
+	grid-template-columns: 1fr var(--hero-circle-lg) 1fr;
 	grid-template-rows: 1fr auto;
 	gap: 0;
 	position: relative;
@@ -33,6 +33,7 @@
 		height: var(--hero-circle-lg);
 		align-self: start;
 		z-index: 1;
+		justify-self: anchor-center;
 	}
 
 	// Small circle — bottom-left, overlaps both
@@ -40,8 +41,8 @@
 		width: var(--hero-circle-sm);
 		height: var(--hero-circle-sm);
 		position: absolute;
-		bottom: -10%;
-		left: calc(var(--hero-circle-lg) * 0.35);
+		bottom: -5%;
+		left: calc(var(--hero-circle-lg) );
 		z-index: 3;
 	}
 
@@ -49,13 +50,17 @@
 	// Main slideshow area
 	// -------------------------
 	.hero-collage-main {
-		grid-column: 2;
+		grid-column: 2/4;
 		grid-row: 1 / -1;
 		position: relative;
-		border-radius: 24px;
+		border-bottom-left-radius: 15rem;
+		border-top-left-radius: 15rem;
+		border-top-right-radius: 0rem;
+		border-bottom-right-radius: 0rem;
+
 		overflow: hidden;
 		margin-left: calc(var(--hero-circle-lg) * -0.15);
-		z-index: 2;
+		z-index: 5;
 		min-height: 100%;
 	}
 
@@ -94,7 +99,7 @@
 
 	.hero-collage-headline {
 		font-family: var(--wp--preset--font-family--primary);
-		font-size: clamp(2rem, 6vw, 4.5rem);
+		font-size: clamp(2rem, 6vw, 5rem);
 		font-weight: 900;
 		line-height: 0.95;
 		color: #fff;
@@ -102,14 +107,33 @@
 		margin: 0 0 0.25em;
 	}
 
+	// Rotating subheadlines container
+	.hero-collage-subheadlines {
+		position: relative;
+	}
+
 	.hero-collage-subheadline {
 		font-family: var(--wp--preset--font-family--primary);
-		font-size: clamp(1.25rem, 3vw, 2.25rem);
+		font-size: clamp(1.25rem, 3vw, 2.75rem);
 		font-weight: 300;
 		font-style: italic;
 		line-height: 1.2;
 		color: #fff;
 		margin: 0;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+
+		// All items except the first are absolutely positioned
+		// so the first item establishes the container height
+		&:not(:first-child) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&.is-active {
+			opacity: 1;
+		}
 	}
 
 	// -------------------------

@@ -2,37 +2,37 @@
 	--grid-gap: clamp(1rem, 2vw, 1.5rem);
 
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 4rem);
 	gap: var(--grid-gap);
+
 
 	// Staggered layout: odd cards push down, even cards push up
 	// Row 1: card 1 (tall, top-aligned), card 2 (shorter, pushed down)
 	// Row 2: card 3 (shorter, bottom-aligned), card 4 (tall, pushed up)
-	.wp-block-thephotocircle-cta-image-card {
-		// Odd cards (1st, 3rd) — left column
-		&:nth-child(odd) {
-			justify-self: stretch;
-		}
 
-		// Even cards (2nd, 4th) — right column
-		&:nth-child(even) {
-			justify-self: stretch;
-		}
 
-		// 1st card — tall, starts at top
-		&:nth-child(1) {
-		}
+	// Card Layouts
+	.cta-image-card1 {
+		grid-area: card1;
+		grid-column: 1/7;
+		grid-row: 1/8;
+	}
+	.cta-image-card2 {
+		grid-area: card2;
+		grid-column: 7/13;
+		grid-row: 1/5;
 
-		// 2nd card — shorter, offset down
-		&:nth-child(2) {
-		}
-
-		// 3rd card — shorter
-		&:nth-child(3) {}
-
-		// 4th card — tall
-		&:nth-child(4) {
-		}
+	}
+	.cta-image-card3 {
+		grid-area: card3;
+		grid-column: 2/7;
+		grid-row: 8/12;
+	}
+	.cta-image-card4 {
+		grid-area: card4;
+		grid-column: 7/11;
+		grid-row: 5/10;
 	}
 
 	// -------------------------

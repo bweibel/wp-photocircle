@@ -4,13 +4,16 @@
 	align-items: flex-start;
 	justify-content: flex-end;
 	position: relative;
-	padding: 2rem 2.5rem;
+	padding: 5rem 2.5rem;
 	min-height: 180px;
 	border-radius: 16px;
 	text-decoration: none;
 	overflow: hidden;
 	cursor: pointer;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	    justify-content: center;
+    align-items: center;
+	min-height: 300px;
 
 	&:hover {
 		transform: translateY(-2px);
@@ -32,16 +35,18 @@
 	.cta-circle-decoration {
 		position: absolute;
 		top: 12px;
-		left: 16px;
+		left: 50%;
 		width: 100px;
 		height: 80px;
+		overflow: visible;
 	}
 
 	.cta-circle-text {
 		font-family: var(--wp--preset--font-family--primary);
-		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-size: clamp(1.5rem, 3vw, 4rem);
 		font-weight: 800;
 		line-height: 1.1;
+
 		position: relative;
 		z-index: 1;
 	}

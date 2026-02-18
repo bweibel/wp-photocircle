@@ -26,9 +26,9 @@
 			"type": "string",
 			"default": ""
 		},
-		"subheadline": {
-			"type": "string",
-			"default": ""
+		"subheadlines": {
+			"type": "array",
+			"default": []
 		}
 	},
 	"supports": {

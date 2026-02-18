@@ -13,11 +13,11 @@ export default function CircleDecoration() {
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			{ /* Small filled circle */ }
-			<circle cx="18" cy="52" r="8" fill="currentColor" />
+			<circle className="cta-circle-sm" cx="18" cy="52" r="8" fill="currentColor" />
 			{ /* Medium ring */ }
-			<circle cx="38" cy="30" r="16" stroke="currentColor" strokeWidth="3" fill="none" />
+			<circle className="cta-circle-md" cx="38" cy="30" r="16" stroke="currentColor" strokeWidth="3" fill="none" />
 			{ /* Large ring */ }
-			<circle cx="72" cy="28" r="26" stroke="currentColor" strokeWidth="3" fill="none" />
+			<circle className="cta-circle-lg" cx="72" cy="28" r="26" stroke="currentColor" strokeWidth="3" fill="none" />
 		</svg>
 	);
 }
